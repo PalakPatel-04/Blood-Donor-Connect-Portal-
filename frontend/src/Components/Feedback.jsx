@@ -11,7 +11,7 @@ export default function Feedback(){
             userRemark: ""
         }
     )
-    const URL="http://localhost:5000/bloodPortal/addFeedback"
+    const URL="https://blood-donor-connect-portal.onrender.com/bloodPortal/addFeedback"
     const handleChange = (e) => {
         const { id, value } = e.target;
         setFeedback({ ...feedback, [id]: value });
