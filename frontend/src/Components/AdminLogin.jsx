@@ -4,7 +4,7 @@ import NavBar from "./NavBar"
 import {useNavigate} from "react-router-dom"
 export default function AdminLogin(){
 
-    const URL="http://localhost:5000/admin/adminlogin"
+    const URL="https://blood-donor-connect-portal.onrender.com/admin/adminlogin"
     const [adminlogin, setAdminlogin] = useState(
         {
             adminId: "",
