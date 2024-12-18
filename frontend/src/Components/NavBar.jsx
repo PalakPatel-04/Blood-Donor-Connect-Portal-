@@ -9,7 +9,7 @@ export default function NavBar(){
   const handleSearch = async (e) => {
       e.preventDefault();
       try {
-          const response = await axios.post("http://localhost:5000/bloodPortal/searchUsersByBloodGroup", { bloodGroup });
+          const response = await axios.post("https://blood-donor-connect-portal.onrender.com/bloodPortal/searchUsersByBloodGroup", { bloodGroup });
           navigate('/search-results', { state: { users: response.data } });
       } catch (error) {
           console.error(error);
