@@ -6,7 +6,7 @@ import AdminHeader from "./AdminHeader"
 export default function AllFeedbacks() {
 
     const [feedback, setfeedback] = useState([])
-    const URL = "http://localhost:5000/admin/showFeedbacks"
+    const URL = "https://blood-donor-connect-portal.onrender.com/admin/showFeedbacks"
 
 
     useEffect(() => {
@@ -28,7 +28,7 @@ export default function AllFeedbacks() {
         e.preventDefault()
         alert(id)
         if (window.confirm("Do you want to delete the record")) {
-            const isdelete = await axios.post(`http://localhost:5000/admin/deleteFeedback/${id}`)
+            const isdelete = await axios.post(`https://blood-donor-connect-portal.onrender.com/admin/deleteFeedback/${id}`)
             if (isdelete.data.code == 200) {
                 setfeedback(feedback.filter(items => items._id !== id))
                 alert("Record deleted successfully")
