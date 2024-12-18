@@ -6,7 +6,7 @@ import AdminHeader from "./AdminHeader"
 export default function AllRegistration() {
 
     let [registration, setRegistration] = useState([])
-    const URL = 'http://localhost:5000/admin/showRegistrations'
+    const URL = 'https://blood-donor-connect-portal.onrender.com/admin/showRegistrations'
 
     useEffect(() => {
         const fetchData = async () => {
@@ -28,7 +28,7 @@ export default function AllRegistration() {
         e.preventDefault()
         alert(id)
         if (window.confirm("Really want to delete ???")) {
-            const isdelete = await axios.post(`http://localhost:5000/admin/deleteRegistration/${id}`)
+            const isdelete = await axios.post(`https://blood-donor-connect-portal.onrender.com/admin/deleteRegistration/${id}`)
             if (isdelete.data.code == 200) {
                 alert("Record deleted")
                 setRegistration(registration.filter(items => items._id != id))
