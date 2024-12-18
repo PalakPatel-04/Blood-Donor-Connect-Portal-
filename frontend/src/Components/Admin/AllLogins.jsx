@@ -6,7 +6,7 @@ import AdminHeader from "./AdminHeader"
 export default function AllLogins() {
 
     let [userlogin, setUserlogin] = useState([])
-    const URL = 'http://localhost:5000/admin/showLogins'
+    const URL = 'https://blood-donor-connect-portal.onrender.com/admin/showLogins'
 
     useEffect(() => {
         const fetchData = async () => {
@@ -28,7 +28,7 @@ export default function AllLogins() {
         e.preventDefault()
         alert(id)
         if (window.confirm("Really want to delete ???")) {
-            const isdelete = await axios.post(`http://localhost:5000/admin/deleteUserlogin/${id}`)
+            const isdelete = await axios.post(`https://blood-donor-connect-portal.onrender.com/admin/deleteUserlogin/${id}`)
             if (isdelete.data.code == 200) {
                 alert("Record deleted")
                 setUserlogin(userlogin.filter(items => items._id != id))
