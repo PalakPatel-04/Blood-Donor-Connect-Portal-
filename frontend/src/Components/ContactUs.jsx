@@ -16,7 +16,7 @@ export default function ContactUs(){
         setContact({ ...contact, [id]: value });
       };
 
-      const URL="http://localhost:5000/bloodPortal/addContact"
+      const URL="https://blood-donor-connect-portal.onrender.com/bloodPortal/addContact"
       const handleSubmit =async (e) => {
         e.preventDefault();  
         try {
