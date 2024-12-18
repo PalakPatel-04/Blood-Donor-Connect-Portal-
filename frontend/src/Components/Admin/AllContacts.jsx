@@ -7,7 +7,7 @@ import { Link } from "react-router-dom"
 export default function AllContacts() {
 
     const [contact, setContact] = useState([])
-    const URL = "http://localhost:5000/admin/showContacts"
+    const URL = "https://blood-donor-connect-portal.onrender.com/admin/showContacts"
 
 
     useEffect(() => {
@@ -29,7 +29,7 @@ export default function AllContacts() {
         e.preventDefault()
         alert(id)
         if (window.confirm("Do you want to delete the record")) {
-            const isdelete = await axios.post(`http://localhost:5000/admin/deleteContact/${id}`)
+            const isdelete = await axios.post(`https://blood-donor-connect-portal.onrender.com/admin/deleteContact/${id}`)
             if(isdelete.data.code==200){
                 setContact(contact.filter(items=>items._id !==id))
                 alert("Record deleted successfully")
