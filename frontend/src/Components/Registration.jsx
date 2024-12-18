@@ -15,7 +15,7 @@ export default function Registration(){
             userAddress:""
         }
     )
-    const URL="http://localhost:5000/bloodPortal/addRegistration"
+    const URL="https://blood-donor-connect-portal.onrender.com/bloodPortal/addRegistration"
     const handleChange = (e) => {
         const { id, value } = e.target;
         setRegistration({ ...registration, [id]: value });
