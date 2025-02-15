@@ -1,5 +1,5 @@
 # Blood Donor Connect Portal
-A responsive web application designed to connect blood donors with recipients efficiently and securely. The platform allows users to register as donors, search for blood donors based on location and blood type, and update their profiles.
+A fullstack web application designed to connect blood donors with recipients efficiently and securely. The platform allows users to register as donors, search for blood donors based on blood type, and update their profiles.
 
 # Features
 1. User Registration: Donors can create accounts and provide details such as blood group, location, and contact information.
